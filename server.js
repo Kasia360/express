@@ -3,9 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use('/admin', (req, res, next) => {
-  if (isAdmin()) next();
-  else res.send('Go away!');
+app.use('/user', (req, res, next) => {
+  res.send('You should log in to enter!');
+
 });
 
 app.use((req, res, next) => {
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname + '/public')));
 
-app.get('/', (req, res) => {
+app.get('/|/home', (req, res) => {
   res.show('index.html');
 });
 
@@ -38,7 +38,7 @@ app.get('/history', (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).send('404 not found...');
+  res.status(404).sendFile(path.join(__dirname + `/public/404.png`));
 });
 
 app.listen(8000, () => {
