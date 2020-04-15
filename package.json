@@ -1,0 +1,8 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Kasia360/express.git",
+  "author": "Kasia Brzezinska <kasiaplaskota4@gmail.com>",
+  "license": "MIT"
+}
