@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:Kasia360/express.git",
   "author": "Kasia Brzezinska <kasiaplaskota4@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1"
+  }
 }
