@@ -1,3 +1,16 @@
+.dark {
+  background-color: #333;
+  color: #eee;
+}
+
+.dark h1 {
+  display: none;
+}
+
+.dark a {
+  color: #eee;
+}
+
 h1 {
   font-weight: lighter;
   font-style: italic;
