@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
+const fileupload = require('express-fileupload');
+//const formidable = require('formidable');
 
 const app = express();
 
@@ -8,6 +10,7 @@ app.engine('.hbs', hbs());
 app.set('view engine', '.hbs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(fileupload());
 
 app.use('/user', (req, res, next) => {
   res.send('You should log in to enter!');
