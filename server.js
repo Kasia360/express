@@ -55,10 +55,13 @@ app.get('/hello/:name', (req, res) => {
 });
 
 app.post('/contact/send-message', (req, res) => {
-  const { author, sender, title, message, file } = req.body;
+  console.log('::', req.body);
+  console.log('::', req.files);
+  const { author, sender, title, message } = req.body;
+  const { attachment } = req.files;
 
-  if (author && sender && title && message && file) {
-    res.render('contact', { isSent: true, fileName: file });
+  if (author && sender && title && message && attachment) {
+    res.render('contact', { isSent: true, fileName: attachment.name });
   } else {
     res.render('contact', { isError: true });
   }
